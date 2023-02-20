@@ -39,27 +39,17 @@ roleRef:
   kind: ClusterRole
   name: applications.argoproj.io-v1alpha1-edit
 ---
-kind: Role
+kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: view-cluster-credentials
   namespace: open-cluster-management
-rules:
-  - verbs:
-      - watch
-      - list
-    apiGroups:
-      - ''
-    resources:
-      - secrets
-      - namespace
-  - verbs:
-      - get
-    apiGroups:
-      - ''
-    resources:
-      - secrets
-    resourceNames:
-      - vcenter
-      - baremetal
-      - hostinventory
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: hpe_redhat
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: view-cluster-credentials
+

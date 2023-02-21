@@ -1,4 +1,4 @@
-# openshift-baremetal-cluster-creation-agent-mode
+# Creation of an Openshift BareMetal cluster with Advanced Cluster Management and Agent Mode (assisted installer)
 
 ## Check you have available hosts in Infrastructure env **bm4**
 
@@ -50,7 +50,7 @@
 
 [![Host page](https://github.com/fdavalo/openshift-baremetal-cluster-creation-agent-mode/blob/main/create-cluster-bm4-hosts.png?raw=true)](create-cluster-bm4-hosts.png)
 
-* Hosts are binded to your cluster
+* Hosts are bound to your cluster
 
 [![Binding hosts](https://github.com/fdavalo/openshift-baremetal-cluster-creation-agent-mode/blob/main/create-cluster-bm4-hosts-binding.png?raw=true)](create-cluster-bm4-hosts-binding.png)
 
